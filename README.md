@@ -19,4 +19,5 @@ class Mydocuments(Base):
     document_domain = Column(String(100), ForeignKey('document.domain'), nullable=False)
     document = relationship("Document", foreign_keys=[document_id])
     mydocuments = relationship("Document", foreign_keys=[document_domain])
+    mydocuments = relationship("Document", foreign_keys=[document_id])
 ```    
